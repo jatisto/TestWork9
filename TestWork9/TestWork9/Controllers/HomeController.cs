@@ -26,13 +26,7 @@ namespace TestWork9.Controllers
 
         public ViewResult Index()
         {
-            var user = _userManager.GetUserAsync(User);
-            if (user != null)
-            {
-                return View("Index");
-            }
-
-            return View("About");
+            return View();
         }
 
 
@@ -61,5 +55,7 @@ namespace TestWork9.Controllers
 
             return PartialView(balance);
         }*/
+
+
     }
 }

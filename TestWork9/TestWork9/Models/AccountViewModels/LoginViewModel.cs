@@ -8,13 +8,7 @@ namespace TestWork9.Models.AccountViewModels
 {
     public class LoginViewModel
     {
-
-
-        [Required]
-        [Display(Name = "Баланс")]
-        public string Balance { get; set; }
-
-        [Required]
+//        [Required]
         [Display(Name = "Личный идентификационный 6 значный код")]
         public string Code { get; set; }
 

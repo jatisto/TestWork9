@@ -11,6 +11,5 @@ namespace TestWork9.Models
     {
         public string Code { get; set; }
         public double Balance { get; set; }
-
     }
 }
