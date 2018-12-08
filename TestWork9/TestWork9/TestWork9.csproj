@@ -20,12 +20,22 @@
 
   <ItemGroup>
     <Folder Include="Pages\" />
+    <Folder Include="Resources\Views\Home\" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Update="Views\Shared\Components\ApplicationUserVM\Default.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\AddBalances\Create.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Views\Shared\Components\ApplicationUserVM\Default.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

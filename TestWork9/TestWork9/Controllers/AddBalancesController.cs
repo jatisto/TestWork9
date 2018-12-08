@@ -62,10 +62,11 @@ namespace TestWork9.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(addBalance);
-                Transaction(addBalance.Id, addBalance.SumAdd);
+//                Transaction(addBalance.Id);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(addBalance);
         }
 
@@ -82,6 +83,7 @@ namespace TestWork9.Controllers
             {
                 return NotFound();
             }
+
             return View(addBalance);
         }
 
@@ -115,8 +117,10 @@ namespace TestWork9.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(addBalance);
         }
 
@@ -153,14 +157,20 @@ namespace TestWork9.Controllers
         {
             return _context.AddBalances.Any(e => e.Id == id);
         }
+/*
 
-        public void Transaction(string id, double addBalance)
+        public void Transaction(string id)
         {
-            var user = _userManager.GetUserAsync(User);
-            var userId = _context.Users.SingleOrDefault(m => m.Id == id);
-            //            var user = new ApplicationUser();
-            userId.Balance += userId.Balance;
-            _context.Users.Add(userId);
-        }
+            var search = _context.AddBalances.FirstOrDefault(m => m.Id == id);
+
+            if (ModelState.IsValid)
+            {
+                ApplicationUser user = new ApplicationUser();
+                search.SumAdd =+ user.Balance;
+                _context.AddBalances.Add(search);
+                _context.SaveChanges();
+            }
+
+        }*/
     }
 }
