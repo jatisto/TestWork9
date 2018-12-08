@@ -11,9 +11,10 @@ using TestWork9.Data;
 namespace TestWork9.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181208070310_DeleteCashAndAddPropertyBalance")]
+    partial class DeleteCashAndAddPropertyBalance
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -128,26 +129,12 @@ namespace TestWork9.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TestWork9.Models.AddBalance", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<double>("SumAdd");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AddBalances");
-                });
-
             modelBuilder.Entity("TestWork9.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
-
-                    b.Property<string>("AddBalanceId");
 
                     b.Property<double>("Balance");
 
@@ -185,8 +172,6 @@ namespace TestWork9.Data.Migrations
                         .HasMaxLength(256);
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AddBalanceId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
@@ -242,13 +227,6 @@ namespace TestWork9.Data.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("TestWork9.Models.ApplicationUser", b =>
-                {
-                    b.HasOne("TestWork9.Models.AddBalance")
-                        .WithMany("UsersList")
-                        .HasForeignKey("AddBalanceId");
                 });
 #pragma warning restore 612, 618
         }

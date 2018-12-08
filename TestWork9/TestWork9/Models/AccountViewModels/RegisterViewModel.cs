@@ -8,13 +8,25 @@ namespace TestWork9.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        static Random generator = new Random();
+        private static double _balance = 1000;
+
+        [Required]
+        [Display(Name = "Личный идентификационный 6 значный код")]
+        public string Code = generator.Next(0, 1000000).ToString("D6");
+
+        [Required]
+        [Display(Name = "На вашем счету")]
+        public double Balance = _balance;
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
