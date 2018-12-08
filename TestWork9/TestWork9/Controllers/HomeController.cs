@@ -55,11 +55,11 @@ namespace TestWork9.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public PartialViewResult Balance()
+        /*public PartialViewResult Balance()
         {
             var balance = _context.Users.FirstOrDefault();
 
             return PartialView(balance);
-        }
+        }*/
     }
 }

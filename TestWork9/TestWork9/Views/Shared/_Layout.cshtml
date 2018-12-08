@@ -33,8 +33,8 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Balance">Баланс</a></li>
-                    <li><a asp-area="" asp-controller="AddBalances" asp-action="Create">Форма перевода средств</a></li>
+                    @* <li><a asp-area="" asp-controller="Home" asp-action="Balance">Баланс</a></li> *@
+                    <li><a asp-area="" asp-controller="AddBalances" asp-action="Create">Перевод_средств</a></li>
                    
                  </ul>
                 @await Html.PartialAsync("_LoginPartial")
