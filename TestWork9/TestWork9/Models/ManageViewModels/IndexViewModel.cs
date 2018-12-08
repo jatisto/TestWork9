@@ -21,5 +21,9 @@ namespace TestWork9.Models.ManageViewModels
         public string PhoneNumber { get; set; }
 
         public string StatusMessage { get; set; }
+
+        [Required]
+        [Display(Name = "Личный идентификационный 6 значный код")]
+        public string Code { get; set; }
     }
 }

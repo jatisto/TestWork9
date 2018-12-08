@@ -8,6 +8,13 @@ namespace TestWork9.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
+        static Random generator = new Random();
+
+        [Required]
+        [Display(Name = "Личный идентификационный 6 значный код")]
+        public string Code = generator.Next(0, 1000000).ToString("D6");
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
