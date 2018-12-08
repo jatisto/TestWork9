@@ -11,10 +11,5 @@ namespace TestWork9.Models
     {
         public string Code { get; set; }
         public double Balance { get; set; }
-
-        public static explicit operator double(ApplicationUser v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

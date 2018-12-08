@@ -24,15 +24,9 @@ namespace TestWork9.Controllers
             _userManager = userManager;
         }
 
-        public ViewResult Index(ApplicationUser user, string returnUrl)
+        public ViewResult Index()
         {
-            var balance = _context.Users.FirstOrDefault();
-            return View(/*new ApplicationUserVM()
-            {
-                User = user,
-                Balance = balance,
-                ReturnUrl = returnUrl
-            }*/);
+            return View();
         }
 
 
@@ -61,5 +55,7 @@ namespace TestWork9.Controllers
 
             return PartialView(balance);
         }*/
+
+
     }
 }
