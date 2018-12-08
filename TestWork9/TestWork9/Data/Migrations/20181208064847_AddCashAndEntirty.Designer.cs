@@ -11,9 +11,10 @@ using TestWork9.Data;
 namespace TestWork9.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20181208064847_AddCashAndEntirty")]
+    partial class AddCashAndEntirty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -185,8 +186,6 @@ namespace TestWork9.Data.Migrations
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
-
-                    b.Property<double>("Balance");
 
                     b.Property<string>("UserId");
 
