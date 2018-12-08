@@ -15,7 +15,7 @@ namespace TestWork9.Models.AccountViewModels
         [Display(Name = "Личный идентификационный 6 значный код")]
         public string Code = generator.Next(0, 1000000).ToString("D6");
 
-        [Required]
+        
         [Display(Name = "На вашем счету")]
         public double Balance = _balance;
 

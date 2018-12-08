@@ -8,13 +8,12 @@ using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 using TestWork9.Data;
 
-namespace TestWork9.Data.Migrations
+namespace TestWork9.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181208084002_AddNewEntity")]
-    partial class AddNewEntity
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
