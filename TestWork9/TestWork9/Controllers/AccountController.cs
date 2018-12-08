@@ -220,12 +220,12 @@ namespace TestWork9.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                
                 var user = new ApplicationUser
                 {
                     UserName = model.Code,
                     Email = model.Email,
-                    Code = model.Code
+                    Code = model.Code,
+                    Balance = model.Balance
                 };
                
 

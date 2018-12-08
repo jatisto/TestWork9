@@ -61,7 +61,8 @@ namespace TestWork9.Controllers
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
-                StatusMessage = StatusMessage
+                StatusMessage = StatusMessage,
+                Balance = user.Balance
             };
 
             return View(model);

@@ -11,6 +11,10 @@ namespace TestWork9.Models.AccountViewModels
 
 
         [Required]
+        [Display(Name = "Баланс")]
+        public string Balance { get; set; }
+
+        [Required]
         [Display(Name = "Личный идентификационный 6 значный код")]
         public string Code { get; set; }
 

@@ -25,5 +25,9 @@ namespace TestWork9.Models.ManageViewModels
         [Required]
         [Display(Name = "Личный идентификационный 6 значный код")]
         public string Code { get; set; }
+
+        [Required]
+        [Display(Name = "Balance")]
+        public double Balance { get; set; }
     }
 }

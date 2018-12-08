@@ -33,12 +33,18 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Balance">Баланс</a></li>
+                    <li><a asp-area="" asp-controller="AddBalances" asp-action="Create">Форма перевода средств</a></li>
+                   
+                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
     <div class="container body-content">
+        @* @Html.RenderAction("Balance", "Home") *@
+        @* @Html.RenderAction("Balance", "Home") *@
+        
         @RenderBody()
         <hr />
         <footer>

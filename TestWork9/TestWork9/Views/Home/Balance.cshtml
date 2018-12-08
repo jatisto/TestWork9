@@ -1,0 +1,14 @@
+﻿@model ApplicationUser
+
+<div class="navbar-right">
+    @Html.ActionLink("Назад", "Index", "Home",
+        new { @class = "btn btn-default navbar-btn" })
+</div>
+
+<div>
+    <b>Ваш баланс: </b>
+   
+    Личный номер: <b >@Model.Code</b>,
+    
+    Ваш баланс: @Model.Balance
+</div>
